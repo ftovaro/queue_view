@@ -2,6 +2,8 @@ class TurnsController < ApplicationController
   before_action :set_turn, only: [:show, :edit, :update, :destroy]
 
   def index
+    TurnManagerJob.perform_later
+
     if session[:turn]
       @turn = Turn.find(session.dig(:turn, "id"))
     else
