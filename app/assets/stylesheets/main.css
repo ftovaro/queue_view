@@ -1,0 +1,55 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.red-div {
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.green-div {
+    background-color: green;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blue-div {
+    background-color: blue;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.counter {
+    color: white;
+    font-size: 6vw;
+    user-select: none;
+    display: flex;
+}
+
+.number {
+    color: white;
+    font-size: 4vw;
+    user-select: none;
+}
+
+.turn {
+    color: white;
+    font-size: 4vw;
+    user-select: none;
+}

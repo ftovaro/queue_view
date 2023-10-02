@@ -1,57 +1,14 @@
-<style>
-  body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-  }
-
-  .red-div {
-      background-color: red;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  .green-div {
-      background-color: green;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  .blue-div {
-      background-color: blue;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-.number {
-    color: white;
-    /* font-size: 30vw; */
-    user-select: none;
-}
-
-.turn {
-    color: white;
-    font-size: 30vw;
-    user-select: none;
-}
-</style>
-
 <%= turbo_stream_from(:turns) %>
+<%= turbo_stream_from(:counter) %>
+
 
 <%= turbo_frame_tag @turn do %>
-  <div class="red-div">
-    <div class="number">Your turn: <%= @turn.value %></div>
-      <div class="turn"><%= @turn.status %></div>
+  <div class="red-div" id="turn-id" data-turn-id="<%= @turn.id %>">
+    <div class="counter">
+      <span>Turns before you:</span>
+      <%= render "counter", { turn: @turn } %>
+    </div>
+    <div class="turn">Status: <%= @turn.status %></div>
   </div>
 <% end %>
 

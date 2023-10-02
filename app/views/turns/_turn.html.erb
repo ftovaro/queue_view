@@ -1,6 +1,8 @@
 <%= turbo_frame_tag turn do %>
   <div class=<%= turn.active? ? "green-div" : "blue-div" %>>
-    <div class="number">Your turn: <%= turn.value %></div>
+      <% if turn.active? %>
+        <div class="turn">You have 10 seconds to complete your actions</div>
+      <% end %>
       <div class="turn"><%= turn.status %></div>
   </div>
 <% end %>
