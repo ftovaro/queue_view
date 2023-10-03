@@ -44,3 +44,7 @@ A Turn represents a user's position and status in the system. The status can be 
 In another terminal:
 
 `bundle exec sidekiq -c 1`
+
+If you want to create some Turns in the console:
+
+`5.times { Turn.create }`
