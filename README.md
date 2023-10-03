@@ -1,14 +1,14 @@
-#Queue Management System
+# Queue Management System
 
 This project simulates a basic queue management system, useful for scenarios such as ticket-selling platforms where there's a need to control the concurrent number of users performing certain actions (e.g., purchasing tickets for a concert).
 
-##Overview
+## Overview
 
 When users access the system, they are assigned a turn. The system continuously checks for users with a `waiting` status and sequentially updates their status to `active` and eventually to `completed`.
 
 While a user's turn is active, the interface changes to notify the user that they can proceed with their actions. The system also displays a count of the number of users ahead of the current user in the queue.
 
-##Features
+## Features
 
 **Real-time Updates**: The project uses TurboStreams to update the frontend in real-time without requiring a page refresh.
 
@@ -18,7 +18,7 @@ While a user's turn is active, the interface changes to notify the user that the
 
 **Status Indication**: The user interface will visually indicate when it's the user's turn to proceed.
 
-##Technical Implementation
+## Technical Implementation
 **TurnManagerJob**
 
 This background job continuously monitors for any users in a waiting status. When found, it updates their status to active and eventually to completed. During this process, real-time updates are broadcasted to the frontend using TurboStreams.
