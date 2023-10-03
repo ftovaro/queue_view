@@ -48,3 +48,11 @@ In another terminal:
 If you want to create some Turns in the console:
 
 `5.times { Turn.create }`
+
+# Images
+
+![waiting](README-images/waiting.png)
+
+![active](README-images/active.png)
+
+![completed](README-images/completed.png)
